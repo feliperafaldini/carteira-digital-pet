@@ -1,27 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --base-color: #E7F0DC;
+    --text-color: #597445;
+    --accent-color: #658147;
+    --input-color: #729762;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: Poppins;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    min-height: 100vh;
+    overflow: hide;
 }
 
-header {
-    background-color: #666;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    border-radius: 8px;
+.wrapper {
+    box-sizing: border-box;
+    background-color: var(--base-color);
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header h1 {
-    margin: 5px;
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
 }
 
 input[type="file"] {
@@ -29,16 +46,23 @@ input[type="file"] {
 }
 
 .custom-file-upload {
+    margin: 20px 0 10px 0;
     display: flex;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 150px;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid #ccc;
+    border: 2px solid var(--input-color);
     cursor: pointer;
+    position: relative;
+    background-color: var(--accent-color);
+    transition: 150ms ease;
+}
+
+.custom-file-upload:hover {
+    border-color: var(--accent-color);
 }
 
 #previa-foto {
@@ -52,45 +76,109 @@ input[type="file"] {
     background-color: #f9f9f9;
 }
 
-#cadastro-pet {
-    background-color: #fff;
-    padding: 40px;
+form {
+    width: min(400px, 100%);
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-#cadastro-pet h2 {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-#cadastro-pet label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#cadastro-pet input,
-#cadastro-pet select,
-#cadastro-pet button {
+form>div {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
 }
 
-#cadastro-pet button {
-    width: 60%;
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    background-color: #333;
-    color: #fff;
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500
 }
 
-#cadastro-pet button:hover {
-    background-color: #ccc;
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+form select {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 0.8em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+form input:hover {
+    border-color: var(--accent-color);
+}
+
+form select:hover {
+    border-color: var(--accent-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+form select:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+div:has(input:focus)>label {
+    background-color: var(--text-color);
+}
+
+div:has(select:focus)>label {
+    background-color: var(--text-color);
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherint;
+    font-weight: 600;
     cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover {
+    background-color: var(--text-color);
+}
+
+form button:focus {
+    outline: none;
+    background-color: var(--text-color);
 }

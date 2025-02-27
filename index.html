@@ -9,41 +9,72 @@
 </head>
 
 <body>
-    <header>
-        <h1>Carteira Digital Pet</h1>
-    </header>
-    <main>
-        <section id="cadastro-pet">
-            <h2>Cadastrar Pet</h2>
-            <form id="formulario-pet">
-                <label for="foto" class="custom-file-upload">
-                    <img id="previa-foto" src="Latias.png" alt="Prévia da foto">
+    <div class="wrapper">
+        <h1>Cadastrar Pet</h1>
+        <div>
+            <label for="photo" class="custom-file-upload">
+                <img id="photo-preview" src="media/preview.jpg" alt="Prévia de foto do pet">
+            </label>
+            <input type="file" id="photo" name="photo" accept="image/*" capture="environment" style="display: none;">
+        </div>
+        <form id="pet-form">
+            <div>
+                <label for="pet-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180-160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm240 0q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180 160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z" />
+                    </svg>
                 </label>
-                <input type="file" id="foto" name="foto" accept="image/*" capture="environment">
-
-                <label for="nome">Nome do Pet:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="tipo">Tipo de Pet:</label>
-                <select id="tipo" name="tipo" required>
+                <input required type="text" name="name" id="pet-name" placeholder="Nome">
+            </div>
+            <div>
+                <label for="tipo">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M194-80v-271l197 197q54-54 96.5-116.5T530-409q0-56-22-107.5T447-607L334-720h140l160-160 82 82q40 40 62 90.5T800-600q0 57-22 107.5T716-402l-82 82v240H194Zm197-187L183-475q-11-11-17-26t-6-31q0-16 6-30.5t17-25.5l84-85 124 123q28 28 43.5 64.5T450-409q0 40-15 76.5T391-267Z" />
+                    </svg>
+                </label>
+                <select required type="tipo" name="tipo">
                     <option value="cachorro">Cachorro</option>
                     <option value="gato">Gato</option>
                     <option value="outro">Outro</option>
                 </select>
-
-                <label for="raca">Raça:</label>
-                <input type="text" id="raca" name="raca" required>
-
-                <label for="idade">Idade:</label>
-                <input type="number" id="idade" name="idade" required>
-
-                <label for="dono">Tutor:</label>
-                <input type="text" id="tutor" name="tutor" required>
-
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>
-    </main>
+            </div>
+            <div>
+                <label for="pet-breed">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M380-80q-59 0-99.5-40.5T240-220q0-9 2.5-14t-.5-8q-3-3-8-.5t-14 2.5q-59 0-99.5-40.5T80-380q0-59 40.5-99.5T220-520q23 0 42 6t36 18l166-166q-12-17-18-36t-6-42q0-59 40.5-99.5T580-880q59 0 99.5 40.5T720-740q0 9-2.5 14t.5 8q3 3 8 .5t14-2.5q59 0 99.5 40.5T880-580q0 59-40.5 99.5T740-440q-23 0-42-6t-36-18L496-298q12 17 18 36t6 42q0 59-40.5 99.5T380-80Z" />
+                    </svg>
+                </label>
+                <input required type="text" name="raca" id="pet-breed" placeholder="Raça">
+            </div>
+            <div>
+                <label for="pet-age">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M480-400q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z" />
+                    </svg>
+                </label>
+                <input required type="number" name="idade" id="pet-age" placeholder="Idade">
+            </div>
+            <div>
+                <label for="owner-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+                    </svg>
+                </label>
+                <input required type="text" name="nome-tutor" id="owner-name" placeholder="Nome do Tutor">
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
