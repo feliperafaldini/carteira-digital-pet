@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background-color: #666;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    cursor: pointer;
+}
+
+#previa-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.custom-file-upload:hover {
+    background-color: #f9f9f9;
+}
+
+#cadastro-pet {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cadastro-pet h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#cadastro-pet label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#cadastro-pet input,
+#cadastro-pet select,
+#cadastro-pet button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cadastro-pet button {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+#cadastro-pet button:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
