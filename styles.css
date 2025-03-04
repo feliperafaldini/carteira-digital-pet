@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* #F68EA8 */
+/* #F3B012 */
+/* #42CAC3 */
+/* #ADA6CE */
+/* #F5F3EE */
+
 :root {
-    --base-color: #E7F0DC;
-    --text-color: #597445;
-    --accent-color: #658147;
-    --input-color: #729762;
+    --base-color: #ADA6CE;
+    --text-color: #F3B012;
+    --accent-color: #42CAC3;
+    --input-color: #F5F3EE;
 }
 
 * {
@@ -14,7 +20,7 @@
 }
 
 html {
-    font-family: Poppins;
+    font-family: Poppins, 'Courier New', Courier, monospace;
     font-size: 12pt;
     color: var(--text-color);
     text-align: center;
@@ -167,9 +173,10 @@ form button {
     border-radius: 10px;
     padding: 0.85em 4em;
     background-color: var(--accent-color);
-    color: var(--base-color);
+    color: var(--input-color);
     font: inherint;
     font-weight: 600;
+    font-size: 20px;
     cursor: pointer;
     transition: 150ms ease;
 }
