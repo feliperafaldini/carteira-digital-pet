@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* #F68EA8 */
+/* #F3B012 */
+/* #42CAC3 */
+/* #ADA6CE */
+/* #F5F3EE */
+
+:root {
+    --base-color: #ADA6CE;
+    --text-color: #F3B012;
+    --accent-color: #42CAC3;
+    --input-color: #F5F3EE;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: Poppins, 'Courier New', Courier, monospace;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hide;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    background-color: var(--base-color);
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    margin: 20px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--input-color);
+    cursor: pointer;
+    position: relative;
+    background-color: var(--accent-color);
+    transition: 150ms ease;
+}
+
+.custom-file-upload:hover {
+    border-color: var(--accent-color);
+}
+
+#photo-preview {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.custom-file-upload:hover {
+    background-color: #f9f9f9;
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+form select {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 0.8em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+form input:hover {
+    border-color: var(--accent-color);
+}
+
+form select:hover {
+    border-color: var(--accent-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+form select:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+div:has(input:focus)>label {
+    background-color: var(--text-color);
+}
+
+div:has(select:focus)>label {
+    background-color: var(--text-color);
+}
+
+form button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85em 4em;
+    background-color: var(--accent-color);
+    color: var(--input-color);
+    font: inherint;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover {
+    background-color: var(--text-color);
+}
+
+form button:focus {
+    outline: none;
+    background-color: var(--text-color);
+}
